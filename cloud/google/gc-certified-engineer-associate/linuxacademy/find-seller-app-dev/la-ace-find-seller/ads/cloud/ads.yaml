@@ -1,0 +1,40 @@
+im imports:
+- path: instance.jinja
+- path: autoscaler.jinja
+- path: loadbalancer.jinja
+
+resources:
+- name: ads-deployment-instances
+  type: instance.jinja
+  properties:
+    region: us-central1
+    zone: us-central1-b
+    prefix: ads-service
+    privateBucket: fsdev-jl-private-bucket
+    publicBucket: fsdev-jl-public-bucket
+    spannerDatabase: fsdev-jl-app-spanner-db
+    spannerInstance: fsdev-jl-app-spanner-instance
+    network: fsdev-jl-app-network
+    subnet: fsdev-jl-ad-app-network-subnet
+    projectID: find-seller-app-dev-252702
+    adBinName: app
+    serviceAccount: 48755628747-compute@developer.gserviceaccount.com
+
+
+- name: ads-deployment-autoscaler
+  type: autoscaler.jinja
+  properties:
+    zone: us-central1-b
+    prefix: ads-service
+    privateBucket: fsdev-jl-private-bucket
+    projectID: find-seller-app-dev-252702
+    adBinName: app
+    size: 1
+    maxSize: 2
+
+- name: ads-deployment-loadbalancer
+  type: loadbalancer.jinja
+  properties:
+    prefix: ads-service
+    network: fsdev-jl-app-network
+    projectID: find-seller-app-dev-252702
