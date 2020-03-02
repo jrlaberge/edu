@@ -6,6 +6,7 @@ This readme serves as my notes as I study for the Professional Cloud Architect c
 Section 1: Linux Academy Course Notes
 * [IAM](#iam)
 * [Billing](#billing)
+* [Monitoring with Stackdriver](#monitoring)
 
 
 <a name="iam"/>
@@ -70,4 +71,63 @@ Billing has the following roles/permissions:
 * Project Billing Manager
     * Similar to Billing Account User, but with no access to project resources.
     * Organization or project level
+
+<a name="monitoring"/>
+
+## Monitoring with Stackdriver
+
+* Stackdriver is a suite of tools used for monitoring, logging, and tracking diagnostics for your applications.
+* Google acquired Stackdriver -- Previously, it was exclusive to AWS
+* Native monitoring of both GCP and AWS
+    * Connect via service accounts/API's on other platforms/on-premises
+* Dynamically discover all GCP resources
+    * Install Stackdriver client on VMs for even greater levels of monitoring
+
+### 6 Different Products
+* Logging
+    * Centralized logging
+* Monitoring
+    * Monitor metrics, health checks, dashboards and alerts
+* Error Reporting
+    * Identify and understand app errors
+* Trace
+    * Find latency bottlenecks in applications
+* Debug
+    * Find/fix code errors in production
+* Profiler (Beta)
+    * Collect CPU/memory data - optimize performance
+
+### Exam Perspective!
+* IAM roles
+* Exports
+* How logging works with other Stackdriver products
+
+### Concepts and Terminology
+* Associated by project
+    * Logs viewer only shows logs for one project
+* Log entry -- records status or event
+    * Includes log name (e.g. 'syslog', 'compute.googleapis.com/activity')
+* Logs -- named collection of log entries
+    * Only exist if there are log entries
+* Retention period
+    * Depends on log type
+
+#### Pricing
+
+* First 50GB per project, per month is free. $0.50/GB after that
+* Admin and system event logs exempt
+* Used to have tier system,(Standard and Premium) that has been replaced with usage only billing as of July 2018
+
+
+#### Retention
+
+Important to know the retention period of various logs.
+
+| Log Type | Retention Period |
+|----------|------------------|
+| Admin Activity | 400 days |
+| Data Access | 30 days |
+| System Event | 400 days |
+| Access Transparency | 400 days |
+| All other logs | 30 days |
 
