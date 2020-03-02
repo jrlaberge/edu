@@ -131,3 +131,17 @@ Important to know the retention period of various logs.
 | Access Transparency | 400 days |
 | All other logs | 30 days |
 
+#### Exporting Logs
+
+##### The basics:
+* Requires a project and destination service
+* Create filter -- select log entries to export
+* Choose destination -- Cloud Storage, BigQuery, Pub/Sub
+* Filter and destination held in a sink -- direct what entries to copy to which destination
+* Only new entries will be exported after sink creation
+
+#### IAM Roles
+* Logging Admin - full control plus add others to logging iam
+* Logs Viewer - view logs
+* Logs Writer - Grant service accounts ability to write (create) logs
+* Logs Configuration Writer - Create metrics and export sinks
