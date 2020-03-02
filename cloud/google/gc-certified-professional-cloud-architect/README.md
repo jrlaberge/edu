@@ -1,14 +1,15 @@
 # Google Cloud Certified Professional Cloud Architect
-======
 
 This readme serves as my notes as I study for the Professional Cloud Architect certification exam
 
 #### Table of Contents
 Section 1: Linux Academy Course Notes
-   [IAM](#iam)
-   [Billing](#billing)
+* [IAM](#iam)
+* [Billing](#billing)
+
 
 <a name="iam"/>
+
 ## IAM
 
 IAM stands for Identity and Access Management.
@@ -49,6 +50,7 @@ Google recommends using the key managed by them if the service account is only u
 Also, as best practice recommends, you should rotate keys at regular intervals (Be careful when rotating keys, not to delete the key while it's in use as this could lead to downtime for your users)
 
 <a name="billing"/>
+
 ## Billing
 
 Billing uses billing accounts, a billing account can be assigned to multiple projects, but each project can only have one billing account.
