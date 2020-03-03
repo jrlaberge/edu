@@ -88,6 +88,7 @@ Billing has the following roles/permissions:
     * Centralized logging
 * Monitoring
     * Monitor metrics, health checks, dashboards and alerts
+    * Exam Tip: Firewall rules must be enabled to allow source IPs of health checks (Can download source IP file)
 * Error Reporting
     * Identify and understand app errors
 * Trace
@@ -145,3 +146,53 @@ Important to know the retention period of various logs.
 * Logs Viewer - view logs
 * Logs Writer - Grant service accounts ability to write (create) logs
 * Logs Configuration Writer - Create metrics and export sinks
+
+### Monitoring
+* Create uptime checks (ie. can use HTTP to probe an endpoint and view if it is available across multiple regions, and set alerts to notify when it's down)
+
+### Trace, Debug, Error Reporting, and Profiler
+
+#### Exam Perspective
+* Conceptual knowledge on how each products is used to solve problems
+* Interaction with Stackdriver Logging
+
+#### Trace
+* Find performance bottlenecks - lat ency (loading times)
+* Collect data from Google App Engine (GAE), Google HTTP load balancers, or apps with Stackdriver Trace SDK
+* Integrated into App Engine Standard - automatically enabled
+* Available for GCE, GKE, and GAE (Flexible)
+    * Requires enabling Stackdriver Trace API or SDK (depending on library)
+* Can be installed on non-GCP resources
+
+#### Trace answers/solves the following:
+* How long does it take my application to handle a given request?
+    * Why is it taking my application so long to handle a request?
+    * Why do some of my requests take longer than others?
+* What is the overall latency of requests to my application?
+* Which microservice is calling a bottleneck?
+* Has latency for my application increased or decreased over time?
+* What can I do to reduce application latency?
+
+#### Error Reporting
+* Real-time error monitoring and alerting in your application
+* Quickly understand errors
+* Write to Stackdriver Logging or Error Reporting API (beta)
+* Automatica and real-time analysis
+    * Alerts and dashboards
+* Built into App Engine Standard and Cloud Functions - automatically enabled
+* In Beta for GAE Flexible, GCE, GKE, EC2 (AWS)
+    * GCE, GKE, EC2 require Stackdriver logging agent to be installed
+* Java, Python, JavaScript, Ruby, C#, PHP and Go
+
+#### Debug
+* Debug application
+* Inspect appliccation state without stopping or slowing app
+* Does not require adding log statements
+* Automatically enabled in GAE Standard
+* Available in GAE Flexible, GCE, and GKE with additional configuration
+* Java, Python, Go, Node.js
+* Can be installed on non-GCP resources
+
+#### Profiler (beta)
+* Profile resource intensive application components
+* Collect CPU/RAM usage data -> associate with source code -> identify high resource usage components
