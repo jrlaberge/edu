@@ -289,3 +289,82 @@ Set new lifecycle policy after making above edits:
 ```
 gsutil lifecycle set filename.json gs://&lt;BUCKET&gt;
 ```   
+
+#### Gsutil Command-Line A-Z
+
+Remove a bucket:
+
+```
+gsutil rm -r gs://<BUCKET>
+```
+
+Create a new bucket:
+
+```
+gsutil mb -l <location> -c <class> gs://<BUCKET>
+```
+
+Copy local files to bucket:
+Note: Use -m for parallel threading
+
+
+```
+  gsutil -m cp -r <files/directory> gs://<BUCKET>
+  ```
+  
+Check versioning policy:
+
+```
+gsutil versioning get gs://<BUCKET> 
+```
+
+Enable versioning:
+
+```
+gsutil versioning set on gs://<BUCKET>
+```
+
+View bucket folder contents:
+
+```
+gsutil ls gs://<BUCKET>/<folder>
+```
+
+View all subfolder contents:
+
+```
+gsutil ls -r gs://<BUCKET>
+```
+
+Change storage class in existing bucket:
+Note: Disable versioning first
+
+
+```
+gsutil versioning set off gs://<BUCKET>
+```
+
+Note: Add -m for parallel threading
+
+
+```
+  gsutil -m rewrite -r -s NEARLINE gs://<BUCKET>/* 
+  ```
+  
+Give public read access to an object via ACL:
+
+```
+gsutil acl ch -u AllUsers:R gs://<BUCKET/object>
+```
+
+Revoke public access:
+
+```
+gsutil acl ch -d AllUsers gs://<BUCKET/>object
+```
+
+Delete bucket:
+
+```
+gsutil rm -r gs://<BUCKET>
+```
