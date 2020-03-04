@@ -7,6 +7,7 @@ Section 1: Linux Academy Course Notes
 * [IAM](#iam)
 * [Billing](#billing)
 * [Monitoring with Stackdriver](#monitoring)
+* [Storage](#storage)
 
 
 <a name="iam"/>
@@ -196,3 +197,95 @@ Important to know the retention period of various logs.
 #### Profiler (beta)
 * Profile resource intensive application components
 * Collect CPU/RAM usage data -> associate with source code -> identify high resource usage components
+
+<a name="storage" />
+
+## Storage
+
+### IAM Roles
+* Below Roles can be set on a project, or bucket level:
+   * Storage Admin
+   * Storage Writer
+   * Storage Viewer
+* Storage Legacy Roles (Cannot be set project-wide):
+   * Admin
+   * Writer
+   * Viewer
+### ACL (Access Control Lists)
+It is recommended to use IAM roles when possible, ACL rules allow you to configure specific ORW (Owner, Read, Writer) permissions on a bucket, or object level basis.
+
+
+### Storage Bucket Types/Class
+
+Regional / Multi-Regional (This cannot be changed once set, set on bucket)
+
+* Multi-Regional 
+   * Highest SLA, most expensive
+* Regional
+* Nearline
+   * Good for data that may need to be accessed once per month
+* Coldline
+   * Good for data that *may* need to be accessed once per year, anything more than that, and Nearline usually works out to be a cheaper alternative.
+   
+
+### Object Versioning & Lifecycle Management
+
+
+#### Versioning Terminology
+
+* Generation
+* Metageneration
+* No realtionship between the two
+
+#### Object Lifecycle Management
+
+* Set Time To Live (TTL) on an object
+   * Archive/Delete older verions
+   * Downgrade storage classes
+* Applied to bucket level
+* Often paired to object versioning, but not required
+* Examples:
+   * Downgrade the storage class of objects older than X number of days
+   * Delete objects created before X date
+   * Keep only X amount of recent versions (versioning required to be enabled)
+* Implemented with combination of Rules, Conditions, and Actions
+
+##### Rules
+##### Conditions
+##### Action
+* Delete
+
+* SetStorageClass
+
+#### Hands-On
+In this lesson, we will go hands-on working with both object versioning and lifecycle management. Commands from the interactive diagram are listed below for further reference.
+
+Check current versioning policy:
+
+```
+gsutil versioning get gs://&lt;BUCKET&gt;
+```
+
+Enable Object Versioning:
+
+```
+gsutil versioning set on gs://&lt;BUCKET&gt;
+```
+
+Check full object details in bucket:
+
+```
+gsutil ls -a gs://&lt;BUCKET&gt;
+```
+
+Download current lifecycle policy to local machine to edit:
+
+```
+gsutil lifecycle get gs://&lt;BUCKET&gt; > filename.json
+```
+
+Set new lifecycle policy after making above edits:
+
+```
+gsutil lifecycle set filename.json gs://&lt;BUCKET&gt;
+```   
