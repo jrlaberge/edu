@@ -8,6 +8,7 @@ Section 1: Linux Academy Course Notes
 * [Billing](#billing)
 * [Monitoring with Stackdriver](#monitoring)
 * [Storage](#storage)
+* [Managed Databases on GCP](#managed-databases)
 
 
 <a name="iam"/>
@@ -368,3 +369,7 @@ Delete bucket:
 ```
 gsutil rm -r gs://<BUCKET>
 ```
+
+<a name="managed-databases" />
+
+## Managed Databases on Google Cloud Platform
