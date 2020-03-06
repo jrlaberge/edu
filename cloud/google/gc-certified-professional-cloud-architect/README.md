@@ -373,3 +373,30 @@ gsutil rm -r gs://<BUCKET>
 <a name="managed-databases" />
 
 ## Managed Databases on Google Cloud Platform
+
+#### Database Options Include:
+* Cloud SQL
+* Cloud Spanner
+* Cloud Storage for Firebase
+* Cloud Storage
+* Cloud Firestore for Firebase
+* Cloud DataStore
+* Cloud BigTable
+* BigQuery
+
+<dl>
+   <dt> OLAP - Online Analytical Processing </dt>
+   <dd> </dd>
+   <dt> OLTP - Online Transactional Processing </dt>
+   <dd> </dd>
+   <dt> Relational Database Management System (RDBMS) </dt>
+   <dd> Structured table (columns, and rows) </dd>
+   <dt> Non Relational Database (NoSQL)</dt>
+   <dd> Faster, commonly used in video games, mobile apps. Uses key:value pairs </dd>
+</dl>
+
+| |![cloud-sql](https://github.com/jrlaberge/edu/blob/master/cloud/google/img/Cloud_SQL.png?raw=true) <br> Cloud SQL | ![cloud-spanner](https://github.com/jrlaberge/edu/blob/master/cloud/google/img/Cloud_Spanner.png?raw=true) <br> Cloud Spanner | ![cloud-datastore](https://github.com/jrlaberge/edu/blob/master/cloud/google/img/Cloud_Datastore.png?raw=true) <br> Cloud Datastore (Firestore) | ![cloud-bigtable](https://github.com/jrlaberge/edu/blob/master/cloud/google/img/Cloud_Bigtable.png?raw=true) <br> Cloud Big Table |    ![bigquery](https://github.com/jrlaberge/edu/blob/master/cloud/google/img/BigQuery.png?raw=true) <br> BigQuery     |
+|---|-----------|---------------|-----------------------------|-----------------|-----------------|
+| | Relational|  Relational   |        Non-relational       | Non-relational  |  Data Warehouse | 
+| Use Case | Structured Data Web Framework | RDBMS + scale, High Transactions | Semi-Structured Key-Value data | High throughput analytics | Mission critical apps, Scale + Consistency |
+| Example | Medical records, Blogs | Global suplply chain, Retail | Product catalog, Game state | Graphs, IoT, Finance | Large data analytics Processing using SQL |
