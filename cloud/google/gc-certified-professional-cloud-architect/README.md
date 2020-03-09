@@ -9,6 +9,7 @@ Section 1: Linux Academy Course Notes
 * [Monitoring with Stackdriver](#monitoring)
 * [Storage](#storage)
 * [Managed Databases on GCP](#managed-databases)
+* [Virtua Networks](#virtual-networks)
 
 
 <a name="iam"/>
@@ -400,3 +401,49 @@ gsutil rm -r gs://<BUCKET>
 | | Relational|  Relational   |        Non-relational       | Non-relational  |  Data Warehouse | 
 | Use Case | Structured Data Web Framework | RDBMS + scale, High Transactions | Semi-Structured Key-Value data | High throughput analytics | Mission critical apps, Scale + Consistency |
 | Example | Medical records, Blogs | Global suplply chain, Retail | Product catalog, Game state | Graphs, IoT, Finance | Large data analytics Processing using SQL |
+
+<a name="virtual-networks" />
+
+## Virtual Networks
+
+### Virtual Private Cloud (VPC)
+
+#### The Basics
+
+* A VPC is a software-defined network (SDN), a virtual version of traditional physical networks.
+* VPCs are multi-regional by default
+* A single VPC can contain many subnets (smaller segments of networks)
+   * Subnets are regional (they can span multiple zones within a region)
+* Project based, however can share between projects with Shared VPC
+* Traditional networking concepts still apply. (ie. Firewall rules, Load Balancing, etc)
+* Traffic to/from instances is controlled via Firewall rules
+* VPC can contain both internal and external IP addresses
+   * Internal (private addresses) range from: 10.0.0.0/8 (Class A), 172.16.0.0/12 (Class B), 192.168.0.0/16 (Class C)
+* Incoming traffic (ingress) is free. Outgoing (egress traffic) has a cost.
+
+IAM for VPC falls under compute engine. In order to access VPC on a new project, compute engine API will be enabled.
+* Compute Admin (Full admin to instances and network)
+* Compute Network Admin (Full network access only)
+
+### Firewall
+
+#### Basics
+
+* Allow/deny traffic to and from instances
+   * Based on configuration
+* Manage both inbound (ingress) and outbound (egress) traffic
+* Defined at network (VPC) level, but enforced for each instance
+* Implied; deny all ingress traffic
+* Implied; allow all egress traffic
+* Firewall components:
+   * Direction (ingress/egress)
+   * Source
+   * Target (destination)
+   * Port / Protocol
+   * Rule (Allow, Deny)
+   * Priority (Order  rules evaluated - First matching rule is applied)
+
+
+   
+
+
