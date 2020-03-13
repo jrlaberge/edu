@@ -443,7 +443,22 @@ IAM for VPC falls under compute engine. In order to access VPC on a new project,
    * Rule (Allow, Deny)
    * Priority (Order  rules evaluated - First matching rule is applied)
 
+### Shared VPC
 
-   
+* Host project: Project that contains the Shared VPC
+* Service project: Project that links to a shared VPC
+* Standalone project: Project that does not use a shared VPC (default)
+* Shared VPC admin: Admin for the shared VPC on host project
+* Service project admin: Admin of shared VPC service project
+
+#### Resources that can use shared VPC
+* Compute Engine Instances
+* Compute Engine Instance Templates
+* Compute Engine Instance Groups
+* Google Kubernetes Engine Clusters
+* Internal IP Addresses
+* Internal DNS
+* Cloud DNS Private Zones
+* Load Balancing
 
 
