@@ -9,27 +9,27 @@
 ## Chapter 6: Monitoring Distributed Systems
 
 ### Key Terms
-Monitoring
-White-box monitoring
-Black-box monitoring
-Dashboard
-Alert
-Root Cause
-Node and Machine
-Push
+* Monitoring
+* White-box monitoring
+* Black-box monitoring
+* Dashboard
+* Alert
+* Root Cause
+* Node and Machine
+* Push
 
 #### Why Monitor?
-Analyzing long-term trends
-Comparing over time or experiment groups
-Alerting
-Building dashboards
-Conducting ad hoc retrospective analysis (i.e., debugging)
+* Analyzing long-term trends
+* Comparing over time or experiment groups
+* Alerting
+* Building dashboards
+* Conducting ad hoc retrospective analysis (i.e., debugging)
 
 ### The Four Golden Signals
-Latency
-Traffic
-Errors
-Saturation
+* Latency
+* Traffic
+* Errors
+* Saturation
 
 ### Important Questions to Ask
 Does this rule detect an otherwise undetected condition that is urgent, actionable and actively or imminently user-visible?
