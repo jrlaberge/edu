@@ -32,23 +32,14 @@
 * Saturation
 
 ### Important Questions to Ask
-Does this rule detect an otherwise undetected condition that is urgent, actionable and actively or imminently user-visible?
-
-Will I ever be able to ignore this alert, knowing it's benign? When and why will I be able to ignore this alert, and how can I avoid this scenario?    
-
-Does this alert definitely indicate that users are being negatively affected? Are there detectable cases in which users aren't being negatively  impacted, such as drained traffic or test deployments, that should be filtered out?
-
-Can I take action in response to this alert? Is that action urgent, or could it wait until morning? Could the action be safely automated? Will that action be a long-term fix, or just a short-term workaround?
-
-Are other people getting paged for this issue, therefore rendering at least one of the pages unnecessary?
-
-
-Every time the pager goes off, I should be able to react with a sense of urgency, I can only react with a sense of urgency a few times a day before I become fatigued.
-
-Every page should be actionable.
-
-Every page response should require intelligence. If a page merely merits a robotic response, it shouldn't be a page.
-
-Pages should be about a novel problem or an event that hasn't been seen before.
+* Does this rule detect an otherwise undetected condition that is urgent, actionable and actively or imminently user-visible?
+* Will I ever be able to ignore this alert, knowing it's benign? When and why will I be able to ignore this alert, and how can I avoid this scenario?    
+* Does this alert definitely indicate that users are being negatively affected? Are there detectable cases in which users aren't being negatively  impacted, such as drained traffic or test deployments, that should be filtered out?
+* Can I take action in response to this alert? Is that action urgent, or could it wait until morning? Could the action be safely automated? Will that action be a long-term fix, or just a short-term workaround?
+* Are other people getting paged for this issue, therefore rendering at least one of the pages unnecessary?
+* Every time the pager goes off, I should be able to react with a sense of urgency, I can only react with a sense of urgency a few times a day before I become fatigued.
+* Every page should be actionable.
+* Every page response should require intelligence. If a page merely merits a robotic response, it shouldn't be a page.
+* Pages should be about a novel problem or an event that hasn't been seen before.
 
 
