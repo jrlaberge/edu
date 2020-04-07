@@ -2,15 +2,22 @@
 
 This readme serves as my notes as I study for the Professional Cloud Architect certification exam
 
-#### Table of Contents
-Section 1: Linux Academy Course Notes
+### Table of Contents
+#### Section 1: Linux Academy Course - Google Cloud Certified Professional Cloud Architect Course
 * [IAM](#iam)
 * [Billing](#billing)
 * [Monitoring with Stackdriver](#monitoring)
 * [Storage](#storage)
 * [Managed Databases on GCP](#managed-databases)
-* [Virtua Networks](#virtual-networks)
+* [Virtual Networks](#virtual-networks)
+#### Section 2: Additional Resources
+* [Codelabs](#codelabs)
+* [Google Cloud Solutions Architecture Reference](#gc-sa-reference)
+* [GCP in 4 Words or Less](#gcp-4-words-or-less)
+* [Official Google Cloud Blog](#gc-blog)
 
+
+# Section 1: Linux Academy Course - Google Cloud Certified Professional Cloud Architect Course
 
 <a name="iam"/>
 
@@ -462,3 +469,27 @@ IAM for VPC falls under compute engine. In order to access VPC on a new project,
 * Load Balancing
 
 
+# Section 2: Additional Resources
+
+<a name="codelabs" />
+
+## Codelabs by Google
+
+Visit [Codelabs](https://codelabs.developers.google.com/)
+<a name="gc-sa-reference" />
+
+## Google Cloud Solutions Architect Reference
+
+Visit [gcp.solutions](https://gcp.solutions/)
+
+<a name="gcp-4-words-or-less" />
+
+## Google Cloud Platform in 4 Words or Less
+
+Visit gregsramblings' [github](https://github.com/gregsramblings/google-cloud-4-words)
+
+<a name="gc-blog" />
+
+## Official Google Cloud Blog
+
+Visit the [blog](https://cloud.google.com/blog/)
