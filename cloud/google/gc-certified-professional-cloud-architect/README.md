@@ -15,6 +15,9 @@ This readme serves as my notes as I study for the Professional Cloud Architect c
 * [Google Cloud Solutions Architecture Reference](#gc-sa-reference)
 * [GCP in 4 Words or Less](#gcp-4-words-or-less)
 * [Official Google Cloud Blog](#gc-blog)
+#### Section 3: Coursera Quizzes and Labs
+* [Quizzes](#quizzes)
+* [Labs](#labs)
 
 
 # Section 1: Linux Academy Course - Google Cloud Certified Professional Cloud Architect Course
@@ -493,3 +496,25 @@ Visit gregsramblings' [github](https://github.com/gregsramblings/google-cloud-4-
 ## Official Google Cloud Blog
 
 Visit the [blog](https://cloud.google.com/blog/)
+
+
+# Section 3: Coursera Quizzes and Labs
+
+<a name="quizzes" />
+
+## Quizzes
+
+### Deploying Applications to Google Cloud
+* You've been asked to write a program that uses Vision API to check for inappropriate content in  photos that are uploaded to a Cloud Storage bucket. Any photos that are inappropriate should be deleted. What might be the simplest, cheapest way to deploy in this program?
+    * Cloud Functions, because the requirements for simplest and cheapest are met with Cloud Functions. Cloud Functions are for single  purpose functions like image analysis. Cloud Functions also can be  triggered by Cloud Storage events, so they provide seamless integration. The payment model based on number of request, processing time of request (measured in 100ms units), and then other resources consumed is the most suitable of all options offered above. There is a free tier too. Cloud Functions also provides automatic scaling, high availability, and fault tolerance.
+* You have containerized multiple applications using Docker and have deployed them using Compute Engine VMs. You want to save cost and simplify container management. What might you do.
+    * Migrate the containers to GKE, as the applications are containerized, and GKE will help with the resource efficiency and hence cost, automate many aspects of the container management, and provide the best solution for the scenario.
+* You need to deploy an existing application that was written in .NET version 4.  The application requires Windows servers, and you don't want to change it. Which should you use?
+    * Compute Engine is needed due to the Windows OS requirement.
+
+### DevOps Automation
+* What Google Cloud feature would be easiest to use to automate a build in response to code being checked into your source code repository?
+    * Cloud Build triggers have been designed specifically to trigger a build automatically when changes are made to source code.
+* Which Google Cloud tools can be used to build a continuous integration  pipeline?
+    * Cloud Source Repositories, Cloud Build, Cloud Container Registry
+* 
