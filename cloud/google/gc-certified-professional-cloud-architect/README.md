@@ -10,6 +10,7 @@ This readme serves as my notes as I study for the Professional Cloud Architect c
 * [Storage](#storage)
 * [Managed Databases on GCP](#managed-databases)
 * [Virtual Networks](#virtual-networks)
+* [Practice Exam](#la-practice-exam)
 #### Section 2: Additional Resources
 * [Codelabs](#codelabs)
 * [Google Cloud Solutions Architecture Reference](#gc-sa-reference)
@@ -18,6 +19,7 @@ This readme serves as my notes as I study for the Professional Cloud Architect c
 #### Section 3: Coursera Quizzes and Labs
 * [Quizzes](#quizzes)
 * [Labs](#labs)
+* [Practice Exam](#coursera-practice-exam)
 
 
 # Section 1: Linux Academy Course - Google Cloud Certified Professional Cloud Architect Course
@@ -519,7 +521,9 @@ Visit the [blog](https://cloud.google.com/blog/)
     * Cloud Source Repositories, Cloud Build, Cloud Container Registry
 * 
 
-### Practice Exam
+<a name="coursera-practice-exam" />
+
+### Practice Exam - Coursera
 * How to keep data in sync across regions? Which service should be used in the icon with the question mark in the diagram?
     * Cloud Storage
 * An existing application uses websockets. To help migrate the application to cloud you should:
