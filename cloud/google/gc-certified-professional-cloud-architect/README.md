@@ -20,6 +20,8 @@ This readme serves as my notes as I study for the Professional Cloud Architect c
 * [Quizzes](#quizzes)
 * [Labs](#labs)
 * [Practice Exam](#coursera-practice-exam)
+#### Section 4: GCP Products
+[Google Cloud Products](#gcp-products)
 
 
 # Section 1: Linux Academy Course - Google Cloud Certified Professional Cloud Architect Course
@@ -541,36 +543,50 @@ Visit the [blog](https://cloud.google.com/blog/)
 * Simply and reliably clone a Linux VM to another project in another region.
     * Snapshot the rood disk, create an image, and use the image for the new VM root disk.
 * A company has this business requirement: ""Improve security by defining and adhering to a set of security and Identity and Access Management (IAM) best practices for cloud." Company security has locked out SSH access to production VMs. How can operations manage the VMs?
-    * Configure a VPN to allow SSH access to VMs
+    * The operations team doesn't actually need SSH access to manage VMs. All it needs is Cloud Shell with the Cloud SDK and gcloud tools. Cloud Shell provides all the tools for managing Compute Engine instances. In this case the assumption that SSH access is needed is incorrect.
 * What security strategy would you recommend for PII (Personally Identifiable Information) data on Cloud Storage?
     * No Cloud IAM roles to users, and granular ACLs on bucket
 * A company has decided to use Cloud SDK tools to deploy to App Engine Flexible. Which one of the following requirements does this meet?
     * Use managed services whenever possible
 * Which of the following business requirements can Cloud DNS help satisfy?
-    * [Needs Review] Build a reliable and reproducible environment with scaled parity of production
+    * Cloud DNS records can be used to redirect customer traffic from on prem to cloud, thereby implementing the failover switch
 * A company has business requirements to keep up with industry transformation and growth by adopting leading technology and to use "incremental innovation" based on business insights. Which one of the following Google Cloud Platform features will support this requirement?
-    * Compute Engine provides automatic discounts with increased usage
+    * BigQuery and Machine Learning are directly designed to be used to surface business insights from data. This is the best option.
 * A game company wants to meet its scaling requirements and also provide insights to investors. Which solution will best meet these needs?
-    * Autoscale based on CPU load and use Data Studio to share metrics.
+    * Stackdriver custom metrics can be crafted to expose specific game activities, which can be useful for autoscaling and provide a detailed source of indicators that may be relevant to investors.
 * A company wants to test a risky update to an App Engine application requiring live traffic. Which of the following options is the best approach?
-    * Deploy a new version, use traffic splitting to test a percentage
+    * Deploying a new version, but not as default, is easily reversed. Traffic splitting enables testing with some live traffic, meeting the requirement.
 * How to automatically and simultaneously deploy new code to each cluster?
-    * Jenkins
+    * Jenkins handles automation and simultaneous deployment.
 * A microservice has intermittent problems that bursts logs. How can you trap it for live debugging?
-    * Set a log metric in Stackdriver logging, alert on it past a threshold
+    * A Stackdriver metric can identify a burst of log lines. You can set an alert. Then connect to the machine while the problem is happening.
 * A company wants penetration security testing that primarily matches an end user perspective.
-    * Use on prem scanners over public internet.
+    * on prem scanners will approach from outside, and over the public internet is where the users are.
 * A sales company runs weekly resiliency tests of the current build in a separate environment by replaying the last holiday sales load. What can improve resiliency?
     * Develop a script that mimics a zone outage and add it to the test.
 * Release failures keep causing rollbacks in a web application. Fixes to QA process reduced rollbacks by 80%. What additional steps can you take?
     * Fragment the monolithic platform into microservices.
 * A car reservation system has long-running transactions. Which one of the following deployment methods should be avoided?
-    * [Needs Review] Blue/green as there can be complications with long running transactions if they are not handled gracefully
+    * Switching the load balancer from pointing at the green "good" environment to the blue "new" environment is a fast way to rollback if there is a problem during release. However, long-running transactions will be disrupted by that switch.
 * Last week a region had a 1% failure rate in web tier VMs? How should you respond?
     * Perform RCA, reviewing cloud provider and deployment details to prevent simliar future failures.
 * Why is it a recommended best practice not to assign blame to an individual or an organization?
     * Because it prematureley ends analysis, so you don't discover root cause in the technology or procedures
 * A healthcare company wants to compliantly use Cloud Storage to store customer medical (HIPAA) data.
-    * Execute a Business Associate Agreement (BAA), but you must still use the service in a HIPAA compliant way
+    * HIPAA is a complicated set of standards. Vendor certification is not sufficient. In general, many Google Cloud services are (can be) HIPAA compliant. However, before the service can be considered compliant, the client must execute a Business Associate Agreement (BAA) with Google. At that point, the service is compliant. But that does not mean the application that uses it is compliant. A third step is that the application and the processes must follow HIPAA standards
 * Which network feature could help a company meet its global service expansion goals by reducing latency?
     * Cloud Content Delivery Network (CDN)
+    
+
+# Section 4: Google Cloud Products
+
+<a name="gcp-products" />
+
+## Google Cloud Products
+
+### Content Delivery Network (CDN)
+
+__Description:__ Google Cloud's CDN enables an organization to expand it's online presence with a single IP address and global reach leveraging Google's global network.
+
+__Benefit:__ Reduces latency
+
