@@ -518,3 +518,55 @@ Visit the [blog](https://cloud.google.com/blog/)
 * Which Google Cloud tools can be used to build a continuous integration  pipeline?
     * Cloud Source Repositories, Cloud Build, Cloud Container Registry
 * 
+
+### Practice Exam
+* How to keep data in sync across regions? Which service should be used in the icon with the question mark in the diagram?
+    * Cloud Storage
+* An existing application uses websockets. To help migrate the application to cloud you should:
+    * HTTP(S) load balancing natively supports websocket proxying.
+* A company is building an image tagging pipeline. Which service should be used in the icon with the question mark in the diagram?
+    * Cloud Pub/Sub
+* How to store data to be accessed once a month and not needed after five years.
+    * Nearline class, lifecycle policy to delete after 5 years.
+* A company has a new IoT pipeline. Which services will make this design work?
+    * Cloud IoT Core, Cloud Pub/Sub
+* Multi-petabyte database for analysts that only know SQL and must be available 24 x 7.
+    * BigQuery
+* Which service completes the CI/CD pipeline? (Cloud Source -> ? -> Container Registry -> GCE -> GKE)
+    * Cloud Container Builder
+* Simply and reliably clone a Linux VM to another project in another region.
+    * Snapshot the rood disk, create an image, and use the image for the new VM root disk.
+* A company has this business requirement: ""Improve security by defining and adhering to a set of security and Identity and Access Management (IAM) best practices for cloud." Company security has locked out SSH access to production VMs. How can operations manage the VMs?
+    * Configure a VPN to allow SSH access to VMs
+* What security strategy would you recommend for PII (Personally Identifiable Information) data on Cloud Storage?
+    * No Cloud IAM roles to users, and granular ACLs on bucket
+* A company has decided to use Cloud SDK tools to deploy to App Engine Flexible. Which one of the following requirements does this meet?
+    * Use managed services whenever possible
+* Which of the following business requirements can Cloud DNS help satisfy?
+    * [Needs Review] Build a reliable and reproducible environment with scaled parity of production
+* A company has business requirements to keep up with industry transformation and growth by adopting leading technology and to use "incremental innovation" based on business insights. Which one of the following Google Cloud Platform features will support this requirement?
+    * Compute Engine provides automatic discounts with increased usage
+* A game company wants to meet its scaling requirements and also provide insights to investors. Which solution will best meet these needs?
+    * Autoscale based on CPU load and use Data Studio to share metrics.
+* A company wants to test a risky update to an App Engine application requiring live traffic. Which of the following options is the best approach?
+    * Deploy a new version, use traffic splitting to test a percentage
+* How to automatically and simultaneously deploy new code to each cluster?
+    * Jenkins
+* A microservice has intermittent problems that bursts logs. How can you trap it for live debugging?
+    * Set a log metric in Stackdriver logging, alert on it past a threshold
+* A company wants penetration security testing that primarily matches an end user perspective.
+    * Use on prem scanners over public internet.
+* A sales company runs weekly resiliency tests of the current build in a separate environment by replaying the last holiday sales load. What can improve resiliency?
+    * Develop a script that mimics a zone outage and add it to the test.
+* Release failures keep causing rollbacks in a web application. Fixes to QA process reduced rollbacks by 80%. What additional steps can you take?
+    * Fragment the monolithic platform into microservices.
+* A car reservation system has long-running transactions. Which one of the following deployment methods should be avoided?
+    * [Needs Review] Blue/green as there can be complications with long running transactions if they are not handled gracefully
+* Last week a region had a 1% failure rate in web tier VMs? How should you respond?
+    * Perform RCA, reviewing cloud provider and deployment details to prevent simliar future failures.
+* Why is it a recommended best practice not to assign blame to an individual or an organization?
+    * Because it prematureley ends analysis, so you don't discover root cause in the technology or procedures
+* A healthcare company wants to compliantly use Cloud Storage to store customer medical (HIPAA) data.
+    * Execute a Business Associate Agreement (BAA), but you must still use the service in a HIPAA compliant way
+* Which network feature could help a company meet its global service expansion goals by reducing latency?
+    * Cloud Content Delivery Network (CDN)
