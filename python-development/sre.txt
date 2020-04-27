@@ -1,0 +1,29 @@
+A site reliability engineer (SRE) will spend up to 50% of their time doing "ops" related work such as issues, on-call, and manual intervention. Since the software system that an SRE oversees is expected to be highly automatic and self-healing, the SRE should spend the other 50% of their time on development tasks such as new features, scaling or automation. The ideal site reliability engineer candidate is either a software engineer with a good administration background or a highly skilled system administrator with knowledge of coding and automation.
+
+DevOps vs SRE
+Main article: DevOps
+Coined around 2008, DevOps is a philosophy of cross-team empathy and business alignment. It's also been associated with a practice that encompasses automation of manual tasks, continuous integration and continuous delivery. SRE and DevOps share the same foundational principles. SRE is viewed by many (as cited in the Google SRE book) as a "specific implementation of DevOps with some idiosyncratic extensions." SREs, being developers themselves, will naturally bring solutions that help remove the barriers between development teams and operations teams.
+
+DevOps defines 5 key pillars of success:
+
+Reduce organizational silos
+Accept failure as normal
+Implement gradual changes
+Leverage tooling and automation
+Measure everything
+SRE satisfies the DevOps pillars as follows:
+
+Reduce organizational silos
+SRE shares ownership with developers to create shared responsibility
+SREs use the same tools that developers use, and vice versa
+Accept failure as normal
+SREs embrace risk
+SRE quantifies failure and availability in a prescriptive manner using Service Level Indicators (SLIs) and Service Level Objectives (SLOs)
+SRE mandates blameless post mortems
+Implement gradual changes
+SRE encourages developers and product owners to move quickly by reducing the cost of failure
+Leverage tooling and automation
+SREs have a charter to automate menial tasks (called "toil") away
+Measure everything
+SRE defines prescriptive ways to measure values
+SRE fundamentally believes that systems operation is a software problem
