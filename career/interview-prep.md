@@ -9,6 +9,13 @@
 
 ## System Administrator
 
+* What is BGP?
+  * BGP stands for Border Gateway Protocol. BGP is an important and essential part of the internet. It allows for fast and efficient routing of data over the internet. Similar to a postal service, where mail is sent to and it determines the best most efficient route to have that mail delivered. BGP is what allows data that spans the globe to be delivered quickly.
+  * An important concept is Atonomous Systems (AS), these are smaller networks that make up the internet. BGP will hop from AS to AS to eventually reach it's destination.
+  
+* What is TCP and 3-Way Handshake?
+  * TCP stands for Transmission Control Protocol, it is a connection oriented protocol, which means it provides accurate and reliable transmission of data. It accomplishes this using the 3-Way Handshake. Which starts by the client sending a SYN packet, and the server responding with a SYNACK (sync acknowledge), and the client sending a follow up ACK to inform the server that it was recieved.
+
 * What is an IP address?
 
 * What is a subnet mask?
