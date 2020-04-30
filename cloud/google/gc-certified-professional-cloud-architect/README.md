@@ -475,6 +475,32 @@ IAM for VPC falls under compute engine. In order to access VPC on a new project,
 * Cloud DNS Private Zones
 * Load Balancing
 
+<a name="la-practice-exam" />
+
+## Practice Exam - Linux Academy
+
+* Your organization stores all customer emails in Cloud Storage for retention and analysis. How should you approach sanitizing this data to remove sensitive information before it is placed in Cloud Storage?
+    * Use The Data Loss Prevention API to automatically detect and redact sensitive data
+* You are in a sensitive environment where public Internet access from the Compute Engine VMs are not allowed. You do not have a VPN connection to your on-premises file server. You need to install specific software on a Compute Engine instance. You are able to connect to your private VM using a bastion host. How should you install the software?
+    * Upload files to Cloud Storage. Configure VM on a subnet with a Private Google Access subnet. Assign only internal IP address. Download files to VM using gsutil
+* You need to take streaming data from thousands of Internet of Things (IoT) devices, ingest it, run it through a processing pipeline, and store it for analysis. You want to run SQL queries against your data for analysis. What services in which order should you use for this task?
+    * Cloud Pub/Sub, Cloud Dataflow, BigQuery
+* Your company is ready to start using Google Cloud, however, they want to use their existing Active Directory domain to manage user identities. What should you do?
+    * Use Google Cloud Directory Sync to sync AD users to Cloud Identity, configure SAML SSO to sync passwords
+* Your application is running on Compute Engine. How can you best design your application's architecture that takes into account a disaster recovery plan that requires your application to fail over to another region in case of a regional outage?
+    * Deploy to two GCE instance groups in different region / same project. Use First instance group to service traffic and HTTP(s) load balancer to fail over to the standby instance group in case of disaster.
+* Your company has different on-premises systems that generate a variety of reports. This data is not well maintained and needs to be cleaned up before it is used for any useful analysis. Which best-practice method should you use to accomplish this task?
+    * Upload your files into Cloud Storage, use Cloud Dataprep to explore and clean your data hosted in Cloud Storage.
+* You need to allow traffic from specific virtual machines in 'subnet-a' network access to machines in 'subnet-b' without giving the entirety of 'subnet-a' access. How can you accomplish this?
+    * Create firewall rule to allow traffic from resources with specific network tags, then assign the machine in subnet-b the same tags. 
+* You are creating a Java web application with multiple dependencies that requires 0.1 CPU cores and 128 MB of memory to operate. You want to be able to both monitor and maximize machine utilization. You need to be able to reliably deploy new versions of the application according to best practices. What actions should you take?
+    * Take the following actions:
+
+    * Create a Kubernetes Engine cluster with n1-standard-1 type machines.
+    * Create a Docker image from the production branch with all dependencies included and tag it with the version number.
+    * Create a Kubernetes Deployment with the imagePullPolicy set to “IfNotPresent” in the staging namespace, and then promote it to the production namespace after testing.
+
+
 
 # Section 2: Additional Resources
 
