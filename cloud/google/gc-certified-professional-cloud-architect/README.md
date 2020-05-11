@@ -499,6 +499,16 @@ IAM for VPC falls under compute engine. In order to access VPC on a new project,
     * Create a Kubernetes Engine cluster with n1-standard-1 type machines.
     * Create a Docker image from the production branch with all dependencies included and tag it with the version number.
     * Create a Kubernetes Deployment with the imagePullPolicy set to “IfNotPresent” in the staging namespace, and then promote it to the production namespace after testing.
+* What is the best practice for separating responsibilities and access for production and development environments?
+    * Separate project for each environment, each team only has access to their project.
+* You need to have a backup/rollback plan in place for your application that is distributed across a large managed instance group. What is the preferred method for doing so?
+    * Use the Rolling Update feature to deploy/roll back versions with different managed instance group templates.
+* Your organization wants to do penetration security scanning on the test and development environments deployed to the cloud for a public application. The scanning should be performed from an end user perspective as much as possible. How should they conduct penetration testing?
+    * Use the on-premises scanners to conduct penetration testing on the cloud environments routing traffic over the public internet.
+* You are migrating your on-premises application to Google Cloud. You will use the Cloud VPN service to connect your on-premises systems and Google Cloud until the migration is completed. What should you do to make sure that all network resources remain reachable during the migration?
+    * Use an IP range on your Google Cloud VPC that does not overlap with the range you use on-premises
+* You can SSH into an instance from another instance in the same VPC by its internal IP address, but not its external IP address. What is one possible reason why this is so?
+    * The firewall rule to allow SSH is restricted to the internal VPC.
 
 
 
