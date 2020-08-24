@@ -1,0 +1,3 @@
+[submodule "cs50x-2020/jrlaberge"]
+	path = cs50x-2020/jrlaberge
+	url = https://github.com/me50/jrlaberge.git
