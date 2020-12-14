@@ -1,0 +1,1 @@
+select AVG(r.rating) as 'Average Ratings from 2012' from movies as m, ratings as r where m .id = r.movie_id and m.year = 2012;

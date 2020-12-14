@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input autofocus class="form-control" name="symbol" placeholder="Symbol" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Quote</button>
+    </form>
+
+    {% if quote %}
+        <div class="alert alert-primary" style="margin-top: 30px;">
+            A share of {{ share }} ({{ symbol }}) costs {{ quote }}.
+        </div>
+    {% endif %}
+{% endblock %}

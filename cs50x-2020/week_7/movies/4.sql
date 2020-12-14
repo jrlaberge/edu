@@ -1,0 +1,1 @@
+select count(title) as 'Movies with a rating of 10.0' from movies as m, ratings as r where m .id = r.movie_id and r.rating = 10.0;

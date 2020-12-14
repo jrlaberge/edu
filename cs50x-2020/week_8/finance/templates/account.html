@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+{% block main %}
+    <form action="/account" method="post">
+        <table class="table table-dark">
+            <tr>
+                <td align="right">Username:</td><td>{{ username }}</td>
+            </tr>
+            <tr>
+                <td align="right">Current Password:</td><td><input type="password" name="current_password" placeholder="********" /></td>
+            </tr>
+            <tr>
+                <td align="right">New Password:</td><td><input type="password" name="password" placeholder="********" /></td>
+            </tr>
+            <tr>
+                <td align="right">Confirm Password:</td><td><input type="password" name="confirmation" placeholder="********" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right"><input type="submit" value="Change Password" /></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

@@ -1,0 +1,1 @@
+select p.name from people as p, ratings as r, directors as d, movies as m where p.id = d.person_id and m.id = r.movie_id and d.movie_id = m.id and r.rating >= 9.0;

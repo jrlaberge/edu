@@ -1,0 +1,1 @@
+select m.title from movies as m, stars as s, people as p where p.id = s.person_id and m.id = s.movie_id and (p.name = 'Johnny Depp' or p.name = 'Helena Bonham Carter') GROUP BY m.title HAVING COUNT(*) > 1;
